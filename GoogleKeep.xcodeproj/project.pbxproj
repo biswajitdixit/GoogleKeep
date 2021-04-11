@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84000BD52622E72700B66B38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84000BD42622E72700B66B38 /* GoogleService-Info.plist */; };
+		84000BF2262339FA00B66B38 /* ForgotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000BF1262339FA00B66B38 /* ForgotTableViewController.swift */; };
+		84000BF52623432C00B66B38 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84000BF42623432C00B66B38 /* Alert.swift */; };
+		8411DBC5261CBBE30028FC51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBC4261CBBE30028FC51 /* AppDelegate.swift */; };
+		8411DBC7261CBBE30028FC51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBC6261CBBE30028FC51 /* SceneDelegate.swift */; };
+		8411DBCC261CBBE30028FC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8411DBCA261CBBE30028FC51 /* Main.storyboard */; };
+		8411DBCE261CBBE70028FC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8411DBCD261CBBE70028FC51 /* Assets.xcassets */; };
+		8411DBD1261CBBE70028FC51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8411DBCF261CBBE70028FC51 /* LaunchScreen.storyboard */; };
+		8411DBDA261CBDAA0028FC51 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBD9261CBDAA0028FC51 /* LoginTableViewController.swift */; };
+		8411DBE6261CDF320028FC51 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBE5261CDF320028FC51 /* String.swift */; };
+		8411DBEA261CE3450028FC51 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBE9261CE3450028FC51 /* UIAlertController.swift */; };
+		842DFC322620490A0014D4A6 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC312620490A0014D4A6 /* EntryViewController.swift */; };
+		842DFC3526204D930014D4A6 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC3426204D930014D4A6 /* NoteCell.swift */; };
+		842DFC39262054340014D4A6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC38262054340014D4A6 /* AddViewController.swift */; };
+		842DFC44262178630014D4A6 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC43262178630014D4A6 /* ReminderViewController.swift */; };
+		842DFC4726217A520014D4A6 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC4626217A520014D4A6 /* Reminder.swift */; };
+		842DFC4E262180190014D4A6 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */; };
+		849C84C0261D6F10004E647C /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C84BF261D6F10004E647C /* SignUpTableViewController.swift */; };
+		B5BA5B0A7EC0D07B7B2F4C3A /* Pods_GoogleKeep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B8FC96FE95CB2BC3C85A9 /* Pods_GoogleKeep.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BC236465ABD87A5F28BE412 /* Pods-GoogleKeep.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleKeep.debug.xcconfig"; path = "Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep.debug.xcconfig"; sourceTree = "<group>"; };
+		84000BD42622E72700B66B38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84000BF1262339FA00B66B38 /* ForgotTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotTableViewController.swift; sourceTree = "<group>"; };
+		84000BF42623432C00B66B38 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8411DBC1261CBBE30028FC51 /* GoogleKeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleKeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8411DBC4261CBBE30028FC51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8411DBC6261CBBE30028FC51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8411DBCB261CBBE30028FC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8411DBCD261CBBE70028FC51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8411DBD0261CBBE70028FC51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8411DBD2261CBBE70028FC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8411DBD9261CBDAA0028FC51 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		8411DBE5261CDF320028FC51 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8411DBE9261CE3450028FC51 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		842DFC312620490A0014D4A6 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		842DFC3426204D930014D4A6 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		842DFC38262054340014D4A6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		842DFC43262178630014D4A6 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		842DFC4626217A520014D4A6 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
+		849C84BF261D6F10004E647C /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		8DAC5B098B1D1F21756FD360 /* Pods-GoogleKeep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleKeep.release.xcconfig"; path = "Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep.release.xcconfig"; sourceTree = "<group>"; };
+		9E6B8FC96FE95CB2BC3C85A9 /* Pods_GoogleKeep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleKeep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8411DBBE261CBBE30028FC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BA5B0A7EC0D07B7B2F4C3A /* Pods_GoogleKeep.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81273DF947FBA8AB7E7E3B36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B8FC96FE95CB2BC3C85A9 /* Pods_GoogleKeep.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84000BEB2623327400B66B38 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				84000BF1262339FA00B66B38 /* ForgotTableViewController.swift */,
+				84000BF42623432C00B66B38 /* Alert.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		8411DBB8261CBBE30028FC51 = {
+			isa = PBXGroup;
+			children = (
+				8411DBC3261CBBE30028FC51 /* GoogleKeep */,
+				8411DBC2261CBBE30028FC51 /* Products */,
+				B915874DD3408482C1E923F2 /* Pods */,
+				81273DF947FBA8AB7E7E3B36 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8411DBC2261CBBE30028FC51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8411DBC1261CBBE30028FC51 /* GoogleKeep.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8411DBC3261CBBE30028FC51 /* GoogleKeep */ = {
+			isa = PBXGroup;
+			children = (
+				84000BEB2623327400B66B38 /* ForgotPassword */,
+				842DFC422621782C0014D4A6 /* Reminder */,
+				842DFBE426201F340014D4A6 /* Note */,
+				849C84BD261D6D3D004E647C /* SignUp */,
+				849C84BC261D6D2D004E647C /* Login */,
+				8411DBE4261CDED40028FC51 /* Extension */,
+				8411DBC4261CBBE30028FC51 /* AppDelegate.swift */,
+				8411DBC6261CBBE30028FC51 /* SceneDelegate.swift */,
+				8411DBCA261CBBE30028FC51 /* Main.storyboard */,
+				8411DBCD261CBBE70028FC51 /* Assets.xcassets */,
+				8411DBCF261CBBE70028FC51 /* LaunchScreen.storyboard */,
+				84000BD42622E72700B66B38 /* GoogleService-Info.plist */,
+				8411DBD2261CBBE70028FC51 /* Info.plist */,
+			);
+			path = GoogleKeep;
+			sourceTree = "<group>";
+		};
+		8411DBE4261CDED40028FC51 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8411DBE5261CDF320028FC51 /* String.swift */,
+				8411DBE9261CE3450028FC51 /* UIAlertController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		842DFBE426201F340014D4A6 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				842DFC3426204D930014D4A6 /* NoteCell.swift */,
+				842DFC312620490A0014D4A6 /* EntryViewController.swift */,
+				842DFC38262054340014D4A6 /* AddViewController.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		842DFC422621782C0014D4A6 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				842DFC43262178630014D4A6 /* ReminderViewController.swift */,
+				842DFC4626217A520014D4A6 /* Reminder.swift */,
+				842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		849C84BC261D6D2D004E647C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8411DBD9261CBDAA0028FC51 /* LoginTableViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		849C84BD261D6D3D004E647C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				849C84BF261D6F10004E647C /* SignUpTableViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		B915874DD3408482C1E923F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BC236465ABD87A5F28BE412 /* Pods-GoogleKeep.debug.xcconfig */,
+				8DAC5B098B1D1F21756FD360 /* Pods-GoogleKeep.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8411DBC0261CBBE30028FC51 /* GoogleKeep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8411DBD5261CBBE70028FC51 /* Build configuration list for PBXNativeTarget "GoogleKeep" */;
+			buildPhases = (
+				847E2BB213A1FCDC6A6241DF /* [CP] Check Pods Manifest.lock */,
+				8411DBBD261CBBE30028FC51 /* Sources */,
+				8411DBBE261CBBE30028FC51 /* Frameworks */,
+				8411DBBF261CBBE30028FC51 /* Resources */,
+				58BDE8D27459A5483682C170 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleKeep;
+			productName = GoogleKeep;
+			productReference = 8411DBC1261CBBE30028FC51 /* GoogleKeep.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8411DBB9261CBBE30028FC51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					8411DBC0261CBBE30028FC51 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 8411DBBC261CBBE30028FC51 /* Build configuration list for PBXProject "GoogleKeep" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8411DBB8261CBBE30028FC51;
+			productRefGroup = 8411DBC2261CBBE30028FC51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8411DBC0261CBBE30028FC51 /* GoogleKeep */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8411DBBF261CBBE30028FC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8411DBD1261CBBE70028FC51 /* LaunchScreen.storyboard in Resources */,
+				84000BD52622E72700B66B38 /* GoogleService-Info.plist in Resources */,
+				8411DBCE261CBBE70028FC51 /* Assets.xcassets in Resources */,
+				8411DBCC261CBBE30028FC51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58BDE8D27459A5483682C170 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		847E2BB213A1FCDC6A6241DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleKeep-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8411DBBD261CBBE30028FC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8411DBDA261CBDAA0028FC51 /* LoginTableViewController.swift in Sources */,
+				8411DBE6261CDF320028FC51 /* String.swift in Sources */,
+				842DFC4726217A520014D4A6 /* Reminder.swift in Sources */,
+				842DFC44262178630014D4A6 /* ReminderViewController.swift in Sources */,
+				842DFC39262054340014D4A6 /* AddViewController.swift in Sources */,
+				842DFC4E262180190014D4A6 /* AddNotificationViewController.swift in Sources */,
+				84000BF52623432C00B66B38 /* Alert.swift in Sources */,
+				8411DBC5261CBBE30028FC51 /* AppDelegate.swift in Sources */,
+				84000BF2262339FA00B66B38 /* ForgotTableViewController.swift in Sources */,
+				849C84C0261D6F10004E647C /* SignUpTableViewController.swift in Sources */,
+				842DFC322620490A0014D4A6 /* EntryViewController.swift in Sources */,
+				842DFC3526204D930014D4A6 /* NoteCell.swift in Sources */,
+				8411DBEA261CE3450028FC51 /* UIAlertController.swift in Sources */,
+				8411DBC7261CBBE30028FC51 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8411DBCA261CBBE30028FC51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8411DBCB261CBBE30028FC51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8411DBCF261CBBE70028FC51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8411DBD0261CBBE70028FC51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8411DBD3261CBBE70028FC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8411DBD4261CBBE70028FC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8411DBD6261CBBE70028FC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC236465ABD87A5F28BE412 /* Pods-GoogleKeep.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoogleKeep/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.add.GoogleKeep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8411DBD7261CBBE70028FC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DAC5B098B1D1F21756FD360 /* Pods-GoogleKeep.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GoogleKeep/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.add.GoogleKeep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8411DBBC261CBBE30028FC51 /* Build configuration list for PBXProject "GoogleKeep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8411DBD3261CBBE70028FC51 /* Debug */,
+				8411DBD4261CBBE70028FC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8411DBD5261CBBE70028FC51 /* Build configuration list for PBXNativeTarget "GoogleKeep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8411DBD6261CBBE70028FC51 /* Debug */,
+				8411DBD7261CBBE70028FC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8411DBB9261CBBE30028FC51 /* Project object */;
+}
