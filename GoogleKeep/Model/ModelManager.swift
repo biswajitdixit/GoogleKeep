@@ -34,11 +34,11 @@ class ModelManager{
         var notes = [NoteModel]()
         do{
             let resultset : FMResultSet? =  try shareInstance.database?.executeQuery("SELECT *  FROM note", values: nil)
-          
-            
+
+
             if resultset != nil{
                 while resultset!.next(){
-                    let note = NoteModel(title: resultset!.string(forColumn: "title")!, description: resultset!.string(forColumn: "description")!)
+                    let note = NoteModel(id: (resultset!.string(forColumn: "id")!), title: (resultset!.string(forColumn: "title")!), description: resultset!.string(forColumn: "description")!)
                     notes.append(note)
                 }
             }
@@ -48,4 +48,15 @@ class ModelManager{
         shareInstance.database?.close()
         return notes
     }
+
+    //Mark:-Updating Note Data
+    func updateNote(note: NoteModel) -> Bool{
+        shareInstance.database?.open()
+
+        let isUpadte = shareInstance.database?.executeUpdate("UPDATE note SET title=?,description=? WHERE id=?", withArgumentsIn: [note.title, note.description,note.id])
+        shareInstance.database?.close()
+        return isUpadte!
+    }
+    
+    
 }

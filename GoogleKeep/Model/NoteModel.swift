@@ -8,6 +8,7 @@
 import Foundation
 
 struct  NoteModel  {
+    var id:String
     var title: String
     var description : String
 }
