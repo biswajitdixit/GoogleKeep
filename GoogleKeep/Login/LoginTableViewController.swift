@@ -28,14 +28,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var textEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let token = AccessToken.current,
-             !token.isExpired {
-             // User is logged in, do work such as go to next view controller.
-        }else{
-            btnFacebook.permissions = ["public_profile", "email"]
-            btnFacebook.delegate = self
-            
-        }
+        print("console")
+
         
     }
 }
@@ -65,13 +59,18 @@ extension LoginTableViewController {
                     }])
                 }else{
                     // Navigation - Home Screen
+                    Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
+                        if let e = error{
+                            print(e.localizedDescription)
+                            print("data error")
+                        }else{
+                           self.performSegue(withIdentifier: "show", sender: self)
+                            self.openAlert(title: "Alert", message: "Login Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
+                           
+                        }
+                    }
                 }
-                Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
-                    if let e = error{
-                        print(e)
-                    }else{
-                        self.openAlert(title: "Alert", message: "Login Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])                       }
-                }
+            
             }else{
                 openAlert(title: "Alert", message: "Please add detail.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                     print("Okay clicked!")
@@ -80,19 +79,3 @@ extension LoginTableViewController {
         }
         
     }
-extension LoginTableViewController: LoginButtonDelegate {
-   
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        let token = result?.token?.tokenString
-        let request = FBSDKLoginKit.GraphRequest(graphPath: "me", parameters: ["fields": "id, email, first_name, last_name, picture, short_name, name, middle_name, name_format,age_range"], tokenString: token, version: nil, httpMethod: .get)
-                request.start { (connection, result, error) in
-                    print("\(result)")    }
-    
-
-    }
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        print("Logout")
-    }
-    
-}

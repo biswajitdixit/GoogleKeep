@@ -25,6 +25,9 @@
 		842DFC4726217A520014D4A6 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC4626217A520014D4A6 /* Reminder.swift */; };
 		842DFC4E262180190014D4A6 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */; };
 		849C84C0261D6F10004E647C /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C84BF261D6F10004E647C /* SignUpTableViewController.swift */; };
+		849F0144262B283E0097CCEC /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0143262B283E0097CCEC /* ContainerVC.swift */; };
+		849F0147262B28BA0097CCEC /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0146262B28BA0097CCEC /* SideMenuVC.swift */; };
+		849F014A262B359F0097CCEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0149262B359F0097CCEC /* MainVC.swift */; };
 		B5BA5B0A7EC0D07B7B2F4C3A /* Pods_GoogleKeep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6B8FC96FE95CB2BC3C85A9 /* Pods_GoogleKeep.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		842DFC4626217A520014D4A6 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
 		849C84BF261D6F10004E647C /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		849F0143262B283E0097CCEC /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		849F0146262B28BA0097CCEC /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		849F0149262B359F0097CCEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8DAC5B098B1D1F21756FD360 /* Pods-GoogleKeep.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleKeep.release.xcconfig"; path = "Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep.release.xcconfig"; sourceTree = "<group>"; };
 		9E6B8FC96FE95CB2BC3C85A9 /* Pods_GoogleKeep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleKeep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +110,7 @@
 		8411DBC3261CBBE30028FC51 /* GoogleKeep */ = {
 			isa = PBXGroup;
 			children = (
+				84E46E03262BEE8B00DDA73D /* SideMenu */,
 				84000BEB2623327400B66B38 /* ForgotPassword */,
 				842DFC422621782C0014D4A6 /* Reminder */,
 				842DFBE426201F340014D4A6 /* Note */,
@@ -164,6 +171,16 @@
 				849C84BF261D6F10004E647C /* SignUpTableViewController.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		84E46E03262BEE8B00DDA73D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				849F0143262B283E0097CCEC /* ContainerVC.swift */,
+				849F0149262B359F0097CCEC /* MainVC.swift */,
+				849F0146262B28BA0097CCEC /* SideMenuVC.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		B915874DD3408482C1E923F2 /* Pods */ = {
@@ -291,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8411DBDA261CBDAA0028FC51 /* LoginTableViewController.swift in Sources */,
+				849F014A262B359F0097CCEC /* MainVC.swift in Sources */,
 				8411DBE6261CDF320028FC51 /* String.swift in Sources */,
 				842DFC4726217A520014D4A6 /* Reminder.swift in Sources */,
 				842DFC44262178630014D4A6 /* ReminderViewController.swift in Sources */,
@@ -299,10 +317,12 @@
 				84000BF52623432C00B66B38 /* Alert.swift in Sources */,
 				8411DBC5261CBBE30028FC51 /* AppDelegate.swift in Sources */,
 				84000BF2262339FA00B66B38 /* ForgotTableViewController.swift in Sources */,
+				849F0144262B283E0097CCEC /* ContainerVC.swift in Sources */,
 				849C84C0261D6F10004E647C /* SignUpTableViewController.swift in Sources */,
 				842DFC322620490A0014D4A6 /* EntryViewController.swift in Sources */,
 				842DFC3526204D930014D4A6 /* NoteCell.swift in Sources */,
 				8411DBEA261CE3450028FC51 /* UIAlertController.swift in Sources */,
+				849F0147262B28BA0097CCEC /* SideMenuVC.swift in Sources */,
 				8411DBC7261CBBE30028FC51 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,6 @@ class SignUpTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-    //    imageProfile.isUserInteractionEnabled = true
         imageProfile.addGestureRecognizer(tapGesture)
         
     }
@@ -62,7 +61,10 @@ class SignUpTableViewController: UITableViewController {
                     if let e = error {
                         print(e.localizedDescription)
                     }else{
-                        self.openAlert(title: "Alert", message: "SignUp Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])                        //Navigation controller
+                        self.openAlert(title: "Alert", message: "SignUp Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
+                        self.performSegue(withIdentifier: "showData", sender: self)
+
+                        //Navigation controller
                     }
                 }
              }else{
