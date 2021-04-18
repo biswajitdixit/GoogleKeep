@@ -54,7 +54,10 @@ extension EntryViewController:UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(vc, animated: true)
     }
     @objc func onClickDelete(_ sender: UIButton){
-
+        let isDeleted = ModelManager.getInstance().deleteNote(note: notes[sender.tag])
+        notes.remove(at: sender.tag)
+        tblView.reloadData()
+        print("is Deleted :- \(isDeleted)")
     }
 
 }

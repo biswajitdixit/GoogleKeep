@@ -58,5 +58,12 @@ class ModelManager{
         return isUpadte!
     }
     
-    
+    //Mark:- Deleting Note Data
+    func deleteNote(note: NoteModel) -> Bool {
+        shareInstance.database?.open()
+
+        let isDeleted = shareInstance.database?.executeUpdate("DELETE FROM note WHERE title=?", withArgumentsIn: [note.title])
+        shareInstance.database?.close()
+        return isDeleted!
+    }
 }
