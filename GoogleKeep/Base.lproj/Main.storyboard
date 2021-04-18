@@ -613,7 +613,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="onClickAdd:" destination="4WY-PR-vz6" eventType="touchUpInside" id="blb-ry-rVg"/>
+                                    <action selector="onClickAdd:" destination="4WY-PR-vz6" eventType="touchUpInside" id="VUq-8d-qpt"/>
                                 </connections>
                             </button>
                         </subviews>

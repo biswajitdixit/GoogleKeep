@@ -19,16 +19,13 @@ class AddViewController: UIViewController {
     }
     
 
-    /*
-     @IBAction func onClickAdd(_ sender: Any) {
-     }
-     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onClickAdd(_ sender: UIButton) {
+        let note = NoteModel(title: txtlable.text!, description: txtDescription.text!)
+        
+        let isSave = ModelManager.getInstance().saveNote(note: note)
+        
+        print("isSave :- \(isSave)")
     }
-    */
+    
 
 }
