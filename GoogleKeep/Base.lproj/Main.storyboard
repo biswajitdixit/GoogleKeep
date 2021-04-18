@@ -583,6 +583,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-WU-01f">
                                 <rect key="frame" x="159" y="140" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.98211747407913208" green="0.98713725805282593" blue="0.97647601366043091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -872,7 +873,6 @@
         <!--Navigation Controller-->
         <scene sceneID="EaN-gZ-5c9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1mc-za-Sbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wKB-oR-cxQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5n7-dI-Hbf"/>
@@ -884,6 +884,7 @@
                         <segue destination="CTl-QT-1hb" kind="relationship" relationship="rootViewController" id="6Dm-bM-8mL"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mc-za-Sbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5783" y="-1457"/>
         </scene>

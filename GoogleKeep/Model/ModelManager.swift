@@ -27,4 +27,25 @@ class ModelManager{
         shareInstance.database?.close()
         return isSave!
     }
+    
+    //Mark:- Fetching Note Data
+    func getAllNote() -> [NoteModel]{
+        shareInstance.database?.open()
+        var notes = [NoteModel]()
+        do{
+            let resultset : FMResultSet? =  try shareInstance.database?.executeQuery("SELECT *  FROM note", values: nil)
+          
+            
+            if resultset != nil{
+                while resultset!.next(){
+                    let note = NoteModel(title: resultset!.string(forColumn: "title")!, description: resultset!.string(forColumn: "description")!)
+                    notes.append(note)
+                }
+            }
+        }catch let error {
+            print(error.localizedDescription)
+        }
+        shareInstance.database?.close()
+        return notes
+    }
 }
