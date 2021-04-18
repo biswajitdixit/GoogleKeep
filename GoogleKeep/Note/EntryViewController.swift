@@ -7,10 +7,15 @@
 
 import UIKit
 
-class EntryViewController: UIViewController {
-    
+class EntryViewController: UIViewController,UISearchBarDelegate, UISearchControllerDelegate  {
+    @IBOutlet weak var tblView: UITableView!
     var notes = [NoteModel]()
-
+    var searchController = UISearchController(searchResultsController: nil)
+    
+    private func DataModelSetUP(){
+        var note = notes
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,11 +24,34 @@ class EntryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
        notes = ModelManager.getInstance().getAllNote()
         tblView.reloadData()
+        searchBarSetUp()
+        DataModelSetUP()
     }
     
-    @IBOutlet weak var tblView: UITableView!
-    
    
+    private func searchBarSetUp(){
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+    }
+   
+
+}
+extension EntryViewController:UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        //later
+        guard let searchText = searchController.searchBar.text else{return}
+        if searchText == "" {
+            DataModelSetUP()
+            
+        }else{
+            DataModelSetUP()
+           notes = notes.filter{
+            $0.title.lowercased().contains(searchText.lowercased())
+            }
+       }
+        tblView.reloadData()
+   }
 
 }
 extension EntryViewController:UITableViewDelegate, UITableViewDataSource {
