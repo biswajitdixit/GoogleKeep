@@ -11,17 +11,10 @@ class NoteCell: UITableViewCell {
 
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var btnEdit: UIButton!
-    @IBOutlet weak var btnDelete: UIButton!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
+   
+    func configureStudent(dict:NoteModel){
+        lblTitle.text = dict.title
+        lblDescription.text = dict.descriptions
     }
 
 }

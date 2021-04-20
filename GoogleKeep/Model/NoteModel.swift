@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct  NoteModel  {
-    var id:String
-    var title: String
-    var description : String
+let fileURL = try! FileManager.default
+    .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+    .appendingPathComponent("Note.db")
+class  NoteModel : NSObject  {
+    var id:String?
+    var title: String?
+    var descriptions:String?
 }

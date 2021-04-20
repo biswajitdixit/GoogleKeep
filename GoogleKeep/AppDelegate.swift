@@ -8,6 +8,7 @@
 import UIKit
 import FBSDKCoreKit
 import Firebase
+import FMDB
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,16 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Util.share.copyDatabase(dbName: "GoogleKeep.db")
+      
         ApplicationDelegate.shared.application(
                    application,
                    didFinishLaunchingWithOptions: launchOptions
                )
+        dbMethod()
         FirebaseApp.configure()
-        Util.share.copyDatabase(dbName: "GoogleKeep.db")
+        dbMethod()
         // Override point for customization after application launch.
         return true
     }
+    func dbMethod() {
+        let database = FMDatabase(url: fileURL)
+        guard  database.open() else {
+            return
+        }
+        do{
+            try database.executeUpdate("CREATE TABLE IF NOT EXISTS note (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT , descriptions TEXT)",values:nil)
+        }catch{
+            print("\(error.localizedDescription)")
+        }
+        database.close()
+    }
+    
+    
     func application(
             _ app: UIApplication,
             open url: URL,

@@ -6,39 +6,74 @@
 //
 
 import UIKit
+import FMDB
 
 class AddViewController: UIViewController {
 
     @IBOutlet weak var txtlable: UITextField!
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var txtDescription: UITextView!
+    var isEdit = false
+    var titles : String?
+    var descriptions:String?
+    var id: String?
     
     var noteData : NoteModel?
-    var headerTitle = ""
+    var noteDelegate : NoteDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if headerTitle != ""{
-            self.title = headerTitle
-            txtlable.text = noteData?.title
-            txtDescription.text = noteData?.description
+        if isEdit == true{
+            txtlable.text = titles
+            txtDescription.text = descriptions
         }
+       
     }
     
 
     @IBAction func onClickAdd(_ sender: UIButton) {
-        if headerTitle != ""{
-            let note = NoteModel(id: noteData!.id, title: txtlable.text!, description: txtDescription.text!)
-            let isUpDated = ModelManager.getInstance().updateNote(note: note)
-            print("is updated :- \(isUpDated)")
-        }else{
-            let note = NoteModel(id: "", title: txtlable.text!, description: txtDescription.text!)
-        
-        let isSave = ModelManager.getInstance().saveNote(note: note)
-        
-        print("isSave :- \(isSave)")
-    }
+        if isEdit == true {
+            updateNote()
+        }
+        else if !(txtlable.text!.isEmpty) && !(txtDescription.text!.isEmpty){
+            insertChatToDB(title: txtlable.text!, descriptions: txtDescription.text!)
+        }
     
 
 }
+    
+    func updateNote(){
+        let database = FMDatabase(url: fileURL)
+        guard database.open() else{
+            print("not fetch database")
+            return
+        }
+        do {
+            try database.executeUpdate("UPDATE note SET title=?,descriptions=? WHERE id='\(id!)'", values: [txtlable.text!,txtDescription.text!])
+        }catch let error{
+            print (error.localizedDescription)
+            
+        }
+        database.close()
+        noteDelegate?.getNoteData()
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func insertChatToDB(title: String, descriptions: String){
+        let database = FMDatabase(url: fileURL)
+       
+        guard database.open() else {
+            print("Unable to open database")
+            return
+        }
+        do{
+            try database.executeUpdate("INSERT INTO note(title,descriptions) values (?,?)", values: [title,descriptions])
+        }
+        catch{
+            print("\(error.localizedDescription)")
+        }
+        database.close()
+        noteDelegate?.getNoteData()
+        self.navigationController?.popViewController(animated: true)
+    }
 }
