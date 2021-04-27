@@ -1,10 +1,3 @@
-//
-//  NoteCell.swift
-//  GoogleKeep
-//
-//  Created by admin on 09/04/21.
-//
-
 import UIKit
 
 class NoteCell: UITableViewCell {

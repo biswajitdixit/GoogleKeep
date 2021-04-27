@@ -1,13 +1,5 @@
-//
-//  ReminderViewController.swift
-//  GoogleKeep
-//
-//  Created by admin on 10/04/21.
-//
-
 import UIKit
 import UserNotifications
-
 
 class ReminderViewController: UIViewController {
     

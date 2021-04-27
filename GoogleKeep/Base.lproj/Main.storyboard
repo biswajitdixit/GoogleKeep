@@ -11,9 +11,9 @@
         <!--Login Table View Controller-->
         <scene sceneID="RGU-He-P7l">
             <objects>
-                <tableViewController id="CTl-QT-1hb" customClass="LoginTableViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LoginTableViewController" id="CTl-QT-1hb" customClass="LoginTableViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hJZ-Ga-N1k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -56,7 +56,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhG-dV-wn7">
                                                     <rect key="frame" x="30" y="403" width="354" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqM-TZ-W9o">
                                                     <rect key="frame" x="133.5" y="463" width="147" height="37"/>
@@ -64,7 +64,6 @@
                                                     <state key="normal" title="Login"/>
                                                     <connections>
                                                         <action selector="btnLogin:" destination="CTl-QT-1hb" eventType="touchUpInside" id="tPZ-kC-Y6s"/>
-                                                        <segue destination="RmA-v2-inV" kind="presentation" identifier="show" modalPresentationStyle="fullScreen" id="koR-1b-Pb4"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wru-KS-bvT">
@@ -72,7 +71,7 @@
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <state key="normal" title="Forgot Password?"/>
                                                     <connections>
-                                                        <segue destination="KXg-pg-a31" kind="show" id="Gz0-ma-Z8B"/>
+                                                        <action selector="forgotPassword:" destination="CTl-QT-1hb" eventType="touchUpInside" id="wT2-B9-B0v"/>
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4AZ-JD-sFc" userLabel="Account">
@@ -264,12 +263,14 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsY-ac-9NB">
-                                                    <rect key="frame" x="174.5" y="625.5" width="65" height="37"/>
+                                                    <rect key="frame" x="133.5" y="625.5" width="147" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="147" id="Hol-WL-uLa"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                                     <state key="normal" title="SignUp"/>
                                                     <connections>
                                                         <action selector="buttonSignupClicked:" destination="6DO-8G-y9B" eventType="touchUpInside" id="eFO-uL-cIN"/>
-                                                        <segue destination="RmA-v2-inV" kind="presentation" identifier="showData" modalPresentationStyle="fullScreen" id="eo9-QS-IpB"/>
                                                     </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="siW-KO-eKm" userLabel="Account">
@@ -287,7 +288,6 @@
                                                             <state key="normal" title="Login"/>
                                                             <connections>
                                                                 <action selector="btnLogin:" destination="6DO-8G-y9B" eventType="touchUpInside" id="aue-y5-42n"/>
-                                                                <segue destination="CTl-QT-1hb" kind="show" id="DTK-yl-a9b"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -354,9 +354,9 @@
         <!--Forgot Table View Controller-->
         <scene sceneID="Xwh-L8-tqc">
             <objects>
-                <tableViewController id="KXg-pg-a31" customClass="ForgotTableViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ForgotTableViewController" id="KXg-pg-a31" customClass="ForgotTableViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fdH-9R-M1O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -390,28 +390,22 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrr-EF-RcG">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrr-EF-RcG" customClass="CustomButton" customModule="GoogleKeep" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="462" width="374" height="40"/>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                                    <state key="normal" title="Send"/>
+                                                    <state key="normal" title="Send">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="forgot_PasswordTappedWith_sender:" destination="KXg-pg-a31" eventType="touchUpInside" id="skn-Si-zhJ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRB-iZ-iei">
-                                                    <rect key="frame" x="18" y="40" width="51" height="30"/>
-                                                    <state key="normal" title="&lt; Login"/>
-                                                    <connections>
-                                                        <segue destination="CTl-QT-1hb" kind="show" id="nxS-h9-qfy"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XRB-iZ-iei" firstAttribute="top" secondItem="WRo-hZ-xnl" secondAttribute="top" constant="40" id="1Sk-Z3-Wc4"/>
                                                 <constraint firstAttribute="trailing" secondItem="LQQ-3V-Mak" secondAttribute="trailing" constant="120" id="3pm-JR-fWa"/>
                                                 <constraint firstAttribute="trailing" secondItem="cj4-CJ-lJP" secondAttribute="trailing" constant="20" id="7US-ad-o7F"/>
                                                 <constraint firstItem="cj4-CJ-lJP" firstAttribute="leading" secondItem="WRo-hZ-xnl" secondAttribute="leading" constant="20" id="CCR-xy-yQy"/>
-                                                <constraint firstItem="XRB-iZ-iei" firstAttribute="leading" secondItem="WRo-hZ-xnl" secondAttribute="leading" constant="18" id="Hma-0u-vj6"/>
                                                 <constraint firstItem="LQQ-3V-Mak" firstAttribute="top" secondItem="0pW-Lf-Htc" secondAttribute="bottom" constant="71" id="OCM-JA-ySA"/>
                                                 <constraint firstItem="cj4-CJ-lJP" firstAttribute="top" secondItem="LQQ-3V-Mak" secondAttribute="bottom" constant="35" id="P0Y-xy-ILf"/>
                                                 <constraint firstItem="0pW-Lf-Htc" firstAttribute="top" secondItem="WRo-hZ-xnl" secondAttribute="top" constant="90" id="eRX-BI-jCq"/>
@@ -447,22 +441,22 @@
             <objects>
                 <viewController storyboardIdentifier="EntryViewController" id="39c-to-R04" customClass="EntryViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TGg-ka-oJa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KUq-aP-aBW">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" rowHeight="109" id="Ihj-oP-g8U" customClass="NoteCell" customModule="GoogleKeep" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="109"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" rowHeight="68" id="Ihj-oP-g8U" customClass="NoteCell" customModule="GoogleKeep" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ihj-oP-g8U" id="sVZ-R5-jSA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y4d-9C-KK7">
-                                                    <rect key="frame" x="10" y="26.5" width="131" height="56"/>
+                                                    <rect key="frame" x="10" y="6" width="131" height="56"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Yzl-ZK-AA3">
                                                             <rect key="frame" x="0.0" y="0.0" width="81" height="20.5"/>
@@ -541,30 +535,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yf4-9R-LYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6083" y="692"/>
+            <point key="canvasLocation" x="6082.608695652174" y="691.74107142857144"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="iWo-mg-I6q">
             <objects>
                 <viewController storyboardIdentifier="AddViewController" id="4WY-PR-vz6" customClass="AddViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fTJ-Mo-RHt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSH-WU-01f">
-                                <rect key="frame" x="52" y="117" width="310.5" height="34"/>
+                                <rect key="frame" x="52" y="149" width="310.5" height="34"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV3-nl-LbA">
-                                <rect key="frame" x="190.5" y="91" width="33" height="21"/>
+                                <rect key="frame" x="190.5" y="123" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nv2-Eo-YNA">
-                                <rect key="frame" x="52" y="212" width="310.5" height="128"/>
+                                <rect key="frame" x="52" y="244" width="310.5" height="128"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="s2z-KQ-EmX"/>
@@ -573,15 +567,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDR-Na-r6a">
-                                <rect key="frame" x="52" y="370" width="310.5" height="30"/>
-                                <state key="normal" title="ADD"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDR-Na-r6a" customClass="CustomButton" customModule="GoogleKeep" customModuleProvider="target">
+                                <rect key="frame" x="52" y="402" width="310.5" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onClickAdd:" destination="4WY-PR-vz6" eventType="touchUpInside" id="VUq-8d-qpt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-2T-AUk">
-                                <rect key="frame" x="163" y="181" width="88" height="21"/>
+                                <rect key="frame" x="163" y="213" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -622,11 +619,11 @@
             <objects>
                 <viewController id="nVn-C4-ELS" customClass="ReminderViewController" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xzl-Xb-jlU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-7a-W4h">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="2M0-xr-9U2" detailTextLabel="tFe-Rs-u9r" style="IBUITableViewCellStyleSubtitle" id="GIU-rE-VGt">
@@ -738,7 +735,7 @@
         <!--ContainerVC-->
         <scene sceneID="sa2-8U-aWk">
             <objects>
-                <viewController id="RmA-v2-inV" customClass="ContainerVC" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContainerVC" id="RmA-v2-inV" customClass="ContainerVC" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mz3-ky-dOT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -778,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNh-ny-ciE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6896" y="-742"/>
+            <point key="canvasLocation" x="6213" y="-753"/>
         </scene>
         <!--Side MenuVC-->
         <scene sceneID="qkw-YJ-qTE">
@@ -880,7 +877,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hxy-sz-ReV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zl2-Zt-CLo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -891,7 +888,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBT-uE-7lN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6896" y="666"/>
+            <point key="canvasLocation" x="6878" y="692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mGD-2v-ruE">
@@ -900,7 +897,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oZk-2f-Wdc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IEw-b4-qTy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -918,7 +915,7 @@
         <!--MainVC-->
         <scene sceneID="x4h-uS-wEl">
             <objects>
-                <viewController id="EGs-o3-80v" customClass="MainVC" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="EGs-o3-80v" customClass="MainVC" customModule="GoogleKeep" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pN6-6W-C6y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -980,7 +977,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="koR-1b-Pb4"/>
         <segue reference="0IC-4q-YzH"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -994,6 +990,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

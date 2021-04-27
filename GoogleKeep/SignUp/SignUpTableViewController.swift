@@ -1,10 +1,3 @@
-//
-//  SignUpTableViewController.swift
-//  GoogleKeep
-//
-//  Created by admin on 07/04/21.
-//
-
 import UIKit
 import Firebase
 
@@ -23,13 +16,14 @@ class SignUpTableViewController: UITableViewController {
         
     }
     
-    @objc
-    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)   {
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)   {
         openGallery()
     }
+    
     @IBAction func btnLogin(_ sender: UIButton) {
-      
-      
+        if let loginVc = self.storyboard?.instantiateViewController(identifier: "LoginTableViewController") as? LoginTableViewController {
+            self.navigationController?.pushViewController( loginVc, animated: true)
+        }
     }
     
     @IBAction func buttonSignupClicked(_ sender: UIButton) {
@@ -62,9 +56,10 @@ class SignUpTableViewController: UITableViewController {
                         print(e.localizedDescription)
                     }else{
                         self.openAlert(title: "Alert", message: "SignUp Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
-                        self.performSegue(withIdentifier: "showData", sender: self)
+                        let storyboards = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboards.instantiateViewController(identifier: "ContainerVC") as! ContainerVC
+                        self.navigationController?.pushViewController(vc, animated: true)
 
-                        //Navigation controller
                     }
                 }
              }else{

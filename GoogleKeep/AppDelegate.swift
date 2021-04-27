@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func dbMethod() {
-        let database = FMDatabase(url: fileURL)
+        let database = FMDatabase(url: noteURL)
         guard  database.open() else {
             return
         }
