@@ -6,11 +6,14 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import  FBSDKLoginKit
 class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+       
         NotificationCenter.default.addObserver(self, selector: #selector(showNote), name: NSNotification.Name("showNote"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(showReminder), name: NSNotification.Name("showReminder"), object: nil)
         
@@ -27,7 +30,18 @@ class MainVC: UIViewController {
     }
     
     @objc func showSignIn() {
-        performSegue(withIdentifier: "showSignIn", sender: nil)
+        FBSDKLoginKit.LoginManager().logOut()
+        let firebaseAuth = Auth.auth()
+    do {
+      try firebaseAuth.signOut()
+        print("signoutSuccessFully")
+        performSegue(withIdentifier: "showLogin", sender: nil)
+    
+        
+    } catch let signOutError as NSError {
+      print ("Error signing out: %@", signOutError)
+    }
+      
     }
 
     

@@ -4,7 +4,6 @@ import  Firebase
 class LoginTableViewController: UITableViewController {
     
     
-
     @IBOutlet weak var btnFacebook: FBLoginButton!
     @IBOutlet weak var textPassword: UITextField!
     
@@ -30,7 +29,6 @@ class LoginTableViewController: UITableViewController {
         print("console")
         btnFacebook.permissions = ["public_profile", "email"]
         btnFacebook.delegate = self
-
         
     }
 }
@@ -50,12 +48,13 @@ extension LoginTableViewController: LoginButtonDelegate{
             }
             
             print("Successfully logged in ")
+        
             if let e = error{
                 print(e.localizedDescription)
             }else{
-            let storyboards = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboards.instantiateViewController(identifier: "ContainerVC") as! ContainerVC
-            self.navigationController?.pushViewController(vc, animated: true)
+                let storyboards = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboards.instantiateViewController(identifier: "ContainerVC") as! ContainerVC
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         })
     }
@@ -100,7 +99,6 @@ extension LoginTableViewController {
                             print("Person not yet Registered")
                             self.openAlert(title: "Alert", message: e.localizedDescription, alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
                         }else{
-                            self.openAlert(title: "Alert", message: "Login Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
                         let storyboards = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboards.instantiateViewController(identifier: "ContainerVC") as! ContainerVC
                         self.navigationController?.pushViewController(vc, animated: true)

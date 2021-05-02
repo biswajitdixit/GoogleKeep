@@ -9,7 +9,8 @@ target 'GoogleKeep' do
     pod 'FMDB'
     pod 'FBSDKLoginKit'
     pod 'Firebase/Auth'
-    pod 'Firebase/Firestore'
-    
+    pod 'Firebase/Database'
+    pod 'Firebase/Core'
+   
 
 end

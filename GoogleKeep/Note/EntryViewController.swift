@@ -1,26 +1,34 @@
 import UIKit
-import  FMDB
+import  Firebase
 
 class EntryViewController: UIViewController {
     
     @IBOutlet weak var tblView: UITableView!
     
-    var notes = [NoteModel]()
-    var searchController = UISearchController(searchResultsController: nil)
+    var user: User!
+    var notes = [NoteItem]()
+    var ref : DatabaseReference!
+    private var databasehandle: DatabaseHandle!
     
+    var searchController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.delegate = self
         tblView.dataSource = self
-        getAllData()
-        searchBarSetUp()
+        user = Auth.auth().currentUser
+        ref = Database.database().reference()
+        startObservingDatabase()
+         searchBarSetUp()
+        tblView.reloadData()
+     
     
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will apper")
-       getAllData()
+     
     }
    
     
@@ -31,9 +39,21 @@ class EntryViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func getAllData(){
-        notes = NoteDataBase().getAllNotes()
-        tblView.reloadData()
+
+    func startObservingDatabase (){
+        databasehandle = ref.child("users/\(self.user.uid)/notes").observe(.value, with: { (snapshot) in
+            var newNote = [NoteItem]()
+            
+            for itemSnapShot in snapshot.children {
+                let note = NoteItem(snapshot: itemSnapShot as! DataSnapshot)
+                newNote.append(note)
+            }
+            self.notes = newNote
+            self.tblView.reloadData()
+        })
+    }
+    deinit {
+        ref.child("users/\(self.user.uid)/notes").removeObserver(withHandle: databasehandle)
     }
     
 }
@@ -49,8 +69,7 @@ extension EntryViewController:UISearchBarDelegate, UISearchControllerDelegate, U
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else{return}
         if searchText == "" {
-            getAllData()
-            
+            startObservingDatabase()
         }else{
            
            notes = notes.filter{
@@ -68,29 +87,30 @@ extension EntryViewController:UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteCell
-        let obj = notes[indexPath.row]
-        cell.configureStudent(dict: obj)
+        let note = notes[indexPath.row]
+        cell.lblDescription.text = note.description
+        cell.lblTitle.text = note.title
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  120
+        return  80
     }
-    
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let note = self.notes[indexPath.row]
-        let cellId = note.id
+        
         let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, scrollview, completionHandler) in
-            NoteDataBase().deleteNote(cellId: cellId!)
-            self.getAllData()
+            note.ref?.removeValue()
             completionHandler(true)
         }
         let edit = UIContextualAction(style: .destructive, title: "Edit") { (action, scrollview, completionHandler) in
             let stroryboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = stroryboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
+            
             vc.titles = note.title
-            vc.descriptions = note.descriptions
-            vc.id = note.id
+            vc.descriptions = note.description
+            vc.key = note.ref?.key
             vc.isEdit = true
             self.navigationController?.pushViewController(vc, animated: true)
             

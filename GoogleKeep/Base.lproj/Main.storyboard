@@ -45,7 +45,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VB7-BP-r1Y">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="sai@gmail.com" borderStyle="roundedRect" placeholder="Enter email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VB7-BP-r1Y">
                                                     <rect key="frame" x="30" y="308" width="354" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="fRI-4h-UFA"/>
@@ -53,7 +53,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhG-dV-wn7">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ab123456" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhG-dV-wn7">
                                                     <rect key="frame" x="30" y="403" width="354" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -950,7 +950,7 @@
                     <connections>
                         <segue destination="Cru-GC-82D" kind="show" identifier="showReminder" id="Z5r-Pp-qhF"/>
                         <segue destination="T5x-gF-16f" kind="show" identifier="showNote" id="hr4-cL-fqc"/>
-                        <segue destination="CTl-QT-1hb" kind="presentation" identifier="showSignIn" modalPresentationStyle="fullScreen" id="0IC-4q-YzH"/>
+                        <segue destination="CTl-QT-1hb" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" id="Wm3-x4-l1I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Av-zQ-8wj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -977,7 +977,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0IC-4q-YzH"/>
+        <segue reference="Wm3-x4-l1I"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Googlekeep" width="225" height="225"/>
