@@ -1,10 +1,3 @@
-//
-//  ContainerVC.swift
-//  GoogleKeep
-//
-//  Created by admin on 17/04/21.
-//
-
 import UIKit
 
 class ContainerVC: UIViewController {

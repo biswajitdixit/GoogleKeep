@@ -55,10 +55,10 @@ class SignUpTableViewController: UITableViewController {
                     if let e = error {
                         print(e.localizedDescription)
                     }else{
-                        self.openAlert(title: "Alert", message: "SignUp Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
                         let storyboards = UIStoryboard(name: "Main", bundle: nil)
                         let vc = storyboards.instantiateViewController(identifier: "ContainerVC") as! ContainerVC
                         self.navigationController?.pushViewController(vc, animated: true)
+                        self.openAlert(title: "Alert", message: "SignUp Successfully", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
 
                     }
                 }

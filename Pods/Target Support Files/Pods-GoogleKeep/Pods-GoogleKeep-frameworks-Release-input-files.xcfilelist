@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-GoogleKeep/Pods-GoogleKeep-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
 ${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework

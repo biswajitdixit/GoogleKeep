@@ -13,6 +13,11 @@ class ReminderViewController: UIViewController {
         
     }
     
+    @IBAction func Cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     @IBAction func didTapAdd(){
         
         guard let vc = storyboard?.instantiateViewController(identifier: "add") as? AddNotificationViewController else {

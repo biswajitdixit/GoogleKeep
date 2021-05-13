@@ -20,18 +20,29 @@
 		8411DBDA261CBDAA0028FC51 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBD9261CBDAA0028FC51 /* LoginTableViewController.swift */; };
 		8411DBE6261CDF320028FC51 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBE5261CDF320028FC51 /* String.swift */; };
 		8411DBEA261CE3450028FC51 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411DBE9261CE3450028FC51 /* UIAlertController.swift */; };
-		842DFC322620490A0014D4A6 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC312620490A0014D4A6 /* EntryViewController.swift */; };
-		842DFC3526204D930014D4A6 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC3426204D930014D4A6 /* NoteCell.swift */; };
-		842DFC39262054340014D4A6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC38262054340014D4A6 /* AddViewController.swift */; };
+		84224E7E264D0C8800D1C536 /* RestoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E7D264D0C8800D1C536 /* RestoreViewController.swift */; };
+		84224E81264D12B800D1C536 /* DeleteNoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E80264D12B800D1C536 /* DeleteNoteCollectionViewCell.swift */; };
+		84224E86264D140C00D1C536 /* DeleteNoteExtenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E85264D140C00D1C536 /* DeleteNoteExtenssion.swift */; };
+		84224E8A264D1FCE00D1C536 /* DeleteNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E89264D1FCE00D1C536 /* DeleteNoteViewController.swift */; };
+		84224E8F264D559100D1C536 /* UnArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E8E264D559100D1C536 /* UnArchiveViewController.swift */; };
+		84224E92264D569800D1C536 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E91264D569800D1C536 /* ArchiveViewController.swift */; };
+		84224E95264D570A00D1C536 /* ArchiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E94264D570A00D1C536 /* ArchiveCollectionViewCell.swift */; };
+		84224E99264D5E9100D1C536 /* ArchiveNoteExtenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84224E98264D5E9100D1C536 /* ArchiveNoteExtenssion.swift */; };
 		842DFC44262178630014D4A6 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC43262178630014D4A6 /* ReminderViewController.swift */; };
 		842DFC4726217A520014D4A6 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC4626217A520014D4A6 /* Reminder.swift */; };
 		842DFC4E262180190014D4A6 /* AddNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */; };
+		845304FD264C4C3D00A3C1B1 /* NoteViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845304FC264C4C3D00A3C1B1 /* NoteViewExtension.swift */; };
+		8463993A2647A3F50062F4D9 /* EditAndAddNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846399392647A3F50062F4D9 /* EditAndAddNote.swift */; };
+		8463996026480F990062F4D9 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463995F26480F990062F4D9 /* NoteCollectionViewCell.swift */; };
+		84639963264812DB0062F4D9 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84639962264812DB0062F4D9 /* GridFlowLayout.swift */; };
+		84639966264812F20062F4D9 /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84639965264812F20062F4D9 /* ListFlowLayout.swift */; };
 		849C84C0261D6F10004E647C /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C84BF261D6F10004E647C /* SignUpTableViewController.swift */; };
 		849F0144262B283E0097CCEC /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0143262B283E0097CCEC /* ContainerVC.swift */; };
 		849F0147262B28BA0097CCEC /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0146262B28BA0097CCEC /* SideMenuVC.swift */; };
-		849F014A262B359F0097CCEC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0149262B359F0097CCEC /* MainVC.swift */; };
+		849F014A262B359F0097CCEC /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0149262B359F0097CCEC /* NotesViewController.swift */; };
 		84E38EE0262F0723006AA52F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E38EDF262F0723006AA52F /* CustomButton.swift */; };
 		84E46E52262C7BA500DDA73D /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E46E51262C7BA500DDA73D /* NoteModel.swift */; };
+		84F22BB1264BB13A001A0988 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22BB0264BB13A001A0988 /* RoundButton.swift */; };
 		84F8C5A8262EB913009460B5 /* Note.db in Resources */ = {isa = PBXBuildFile; fileRef = 84F8C5A7262EB913009460B5 /* Note.db */; };
 		84FC7FC0263E743100199489 /* NoteItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7FBF263E743100199489 /* NoteItems.swift */; };
 		84FC7FC5263EE18800199489 /* NoteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7FC4263EE18800199489 /* NoteDataModel.swift */; };
@@ -56,18 +67,29 @@
 		8411DBD9261CBDAA0028FC51 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		8411DBE5261CDF320028FC51 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8411DBE9261CE3450028FC51 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
-		842DFC312620490A0014D4A6 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
-		842DFC3426204D930014D4A6 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
-		842DFC38262054340014D4A6 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		84224E7D264D0C8800D1C536 /* RestoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreViewController.swift; sourceTree = "<group>"; };
+		84224E80264D12B800D1C536 /* DeleteNoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		84224E85264D140C00D1C536 /* DeleteNoteExtenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteExtenssion.swift; sourceTree = "<group>"; };
+		84224E89264D1FCE00D1C536 /* DeleteNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteViewController.swift; sourceTree = "<group>"; };
+		84224E8E264D559100D1C536 /* UnArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnArchiveViewController.swift; sourceTree = "<group>"; };
+		84224E91264D569800D1C536 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		84224E94264D570A00D1C536 /* ArchiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		84224E98264D5E9100D1C536 /* ArchiveNoteExtenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveNoteExtenssion.swift; sourceTree = "<group>"; };
 		842DFC43262178630014D4A6 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		842DFC4626217A520014D4A6 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationViewController.swift; sourceTree = "<group>"; };
+		845304FC264C4C3D00A3C1B1 /* NoteViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewExtension.swift; sourceTree = "<group>"; };
+		846399392647A3F50062F4D9 /* EditAndAddNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAndAddNote.swift; sourceTree = "<group>"; };
+		8463995F26480F990062F4D9 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		84639962264812DB0062F4D9 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		84639965264812F20062F4D9 /* ListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowLayout.swift; sourceTree = "<group>"; };
 		849C84BF261D6F10004E647C /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		849F0143262B283E0097CCEC /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		849F0146262B28BA0097CCEC /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
-		849F0149262B359F0097CCEC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		849F0149262B359F0097CCEC /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		84E38EDF262F0723006AA52F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		84E46E51262C7BA500DDA73D /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		84F22BB0264BB13A001A0988 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		84F8C5A7262EB913009460B5 /* Note.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Note.db; sourceTree = "<group>"; };
 		84FC7FBF263E743100199489 /* NoteItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItems.swift; sourceTree = "<group>"; };
 		84FC7FC4263EE18800199489 /* NoteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDataModel.swift; sourceTree = "<group>"; };
@@ -126,13 +148,16 @@
 		8411DBC3261CBBE30028FC51 /* GoogleKeep */ = {
 			isa = PBXGroup;
 			children = (
+				84224E8D264D556100D1C536 /* Archive */,
+				84224E77264D0A8800D1C536 /* DeletedNote */,
+				846399312647A26E0062F4D9 /* Note */,
 				84E46E06262C74A100DDA73D /* Model */,
 				84E46E03262BEE8B00DDA73D /* SideMenu */,
 				842DFC422621782C0014D4A6 /* Reminder */,
-				842DFBE426201F340014D4A6 /* Note */,
 				849C84BD261D6D3D004E647C /* SignUp */,
 				84000BEB2623327400B66B38 /* ForgotPassword */,
 				849C84BC261D6D2D004E647C /* Login */,
+				84F22BAF264BB0F6001A0988 /* Button */,
 				8411DBE4261CDED40028FC51 /* Extension */,
 				8411DBC4261CBBE30028FC51 /* AppDelegate.swift */,
 				8411DBC6261CBBE30028FC51 /* SceneDelegate.swift */,
@@ -141,7 +166,6 @@
 				8411DBCF261CBBE70028FC51 /* LaunchScreen.storyboard */,
 				84000BD42622E72700B66B38 /* GoogleService-Info.plist */,
 				8411DBD2261CBBE70028FC51 /* Info.plist */,
-				84E38EDF262F0723006AA52F /* CustomButton.swift */,
 			);
 			path = GoogleKeep;
 			sourceTree = "<group>";
@@ -155,14 +179,42 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		842DFBE426201F340014D4A6 /* Note */ = {
+		84224E77264D0A8800D1C536 /* DeletedNote */ = {
 			isa = PBXGroup;
 			children = (
-				842DFC3426204D930014D4A6 /* NoteCell.swift */,
-				842DFC312620490A0014D4A6 /* EntryViewController.swift */,
-				842DFC38262054340014D4A6 /* AddViewController.swift */,
+				84224E84264D13F400D1C536 /* Extensssion */,
+				84224E7D264D0C8800D1C536 /* RestoreViewController.swift */,
+				84224E80264D12B800D1C536 /* DeleteNoteCollectionViewCell.swift */,
+				84224E89264D1FCE00D1C536 /* DeleteNoteViewController.swift */,
 			);
-			path = Note;
+			path = DeletedNote;
+			sourceTree = "<group>";
+		};
+		84224E84264D13F400D1C536 /* Extensssion */ = {
+			isa = PBXGroup;
+			children = (
+				84224E85264D140C00D1C536 /* DeleteNoteExtenssion.swift */,
+			);
+			path = Extensssion;
+			sourceTree = "<group>";
+		};
+		84224E8D264D556100D1C536 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				84224E97264D5E6B00D1C536 /* Extension */,
+				84224E8E264D559100D1C536 /* UnArchiveViewController.swift */,
+				84224E91264D569800D1C536 /* ArchiveViewController.swift */,
+				84224E94264D570A00D1C536 /* ArchiveCollectionViewCell.swift */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		84224E97264D5E6B00D1C536 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84224E98264D5E9100D1C536 /* ArchiveNoteExtenssion.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		842DFC422621782C0014D4A6 /* Reminder */ = {
@@ -173,6 +225,27 @@
 				842DFC4D262180190014D4A6 /* AddNotificationViewController.swift */,
 			);
 			path = Reminder;
+			sourceTree = "<group>";
+		};
+		845304FB264C4B7E00A3C1B1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				845304FC264C4C3D00A3C1B1 /* NoteViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		846399312647A26E0062F4D9 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				845304FB264C4B7E00A3C1B1 /* Extension */,
+				846399392647A3F50062F4D9 /* EditAndAddNote.swift */,
+				8463995F26480F990062F4D9 /* NoteCollectionViewCell.swift */,
+				84639962264812DB0062F4D9 /* GridFlowLayout.swift */,
+				84639965264812F20062F4D9 /* ListFlowLayout.swift */,
+				849F0149262B359F0097CCEC /* NotesViewController.swift */,
+			);
+			path = Note;
 			sourceTree = "<group>";
 		};
 		849C84BC261D6D2D004E647C /* Login */ = {
@@ -195,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				849F0143262B283E0097CCEC /* ContainerVC.swift */,
-				849F0149262B359F0097CCEC /* MainVC.swift */,
 				849F0146262B28BA0097CCEC /* SideMenuVC.swift */,
 			);
 			path = SideMenu;
@@ -208,6 +280,15 @@
 				84FC7FC2263EE05100199489 /* Sql */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		84F22BAF264BB0F6001A0988 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				84E38EDF262F0723006AA52F /* CustomButton.swift */,
+				84F22BB0264BB13A001A0988 /* RoundButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		84FC7FC2263EE05100199489 /* Sql */ = {
@@ -357,16 +438,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845304FD264C4C3D00A3C1B1 /* NoteViewExtension.swift in Sources */,
+				84224E8A264D1FCE00D1C536 /* DeleteNoteViewController.swift in Sources */,
+				84224E86264D140C00D1C536 /* DeleteNoteExtenssion.swift in Sources */,
+				84F22BB1264BB13A001A0988 /* RoundButton.swift in Sources */,
+				84639966264812F20062F4D9 /* ListFlowLayout.swift in Sources */,
+				84224E99264D5E9100D1C536 /* ArchiveNoteExtenssion.swift in Sources */,
 				8411DBDA261CBDAA0028FC51 /* LoginTableViewController.swift in Sources */,
+				84224E7E264D0C8800D1C536 /* RestoreViewController.swift in Sources */,
 				84E38EE0262F0723006AA52F /* CustomButton.swift in Sources */,
 				84E46E52262C7BA500DDA73D /* NoteModel.swift in Sources */,
-				849F014A262B359F0097CCEC /* MainVC.swift in Sources */,
+				849F014A262B359F0097CCEC /* NotesViewController.swift in Sources */,
 				8405B5AD263800CA00170F9C /* NoteDataBase.swift in Sources */,
+				84224E81264D12B800D1C536 /* DeleteNoteCollectionViewCell.swift in Sources */,
+				84639963264812DB0062F4D9 /* GridFlowLayout.swift in Sources */,
+				84224E92264D569800D1C536 /* ArchiveViewController.swift in Sources */,
 				8411DBE6261CDF320028FC51 /* String.swift in Sources */,
 				84FC7FC0263E743100199489 /* NoteItems.swift in Sources */,
 				842DFC4726217A520014D4A6 /* Reminder.swift in Sources */,
 				842DFC44262178630014D4A6 /* ReminderViewController.swift in Sources */,
-				842DFC39262054340014D4A6 /* AddViewController.swift in Sources */,
+				8463996026480F990062F4D9 /* NoteCollectionViewCell.swift in Sources */,
 				842DFC4E262180190014D4A6 /* AddNotificationViewController.swift in Sources */,
 				84000BF52623432C00B66B38 /* Alert.swift in Sources */,
 				8411DBC5261CBBE30028FC51 /* AppDelegate.swift in Sources */,
@@ -374,13 +465,14 @@
 				84000BF2262339FA00B66B38 /* ForgotTableViewController.swift in Sources */,
 				849F0144262B283E0097CCEC /* ContainerVC.swift in Sources */,
 				849C84C0261D6F10004E647C /* SignUpTableViewController.swift in Sources */,
-				842DFC322620490A0014D4A6 /* EntryViewController.swift in Sources */,
-				842DFC3526204D930014D4A6 /* NoteCell.swift in Sources */,
 				84FC7FCA263EE3BF00199489 /* NoteRealtimeDatabase.swift in Sources */,
 				8411DBEA261CE3450028FC51 /* UIAlertController.swift in Sources */,
+				8463993A2647A3F50062F4D9 /* EditAndAddNote.swift in Sources */,
+				84224E8F264D559100D1C536 /* UnArchiveViewController.swift in Sources */,
 				849F0147262B28BA0097CCEC /* SideMenuVC.swift in Sources */,
 				8411DBC7261CBBE30028FC51 /* SceneDelegate.swift in Sources */,
 				84FC7FC5263EE18800199489 /* NoteDataModel.swift in Sources */,
+				84224E95264D570A00D1C536 /* ArchiveCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +623,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoogleKeep/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,6 +645,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoogleKeep/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

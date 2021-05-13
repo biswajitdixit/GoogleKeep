@@ -14,12 +14,13 @@ class SideMenuVC: UITableViewController {
         NotificationCenter.default.post(name: NSNotification.Name("showSideMenu"), object: nil)
         
         switch indexPath.row {
-        case 0:
-            NotificationCenter.default.post(name: NSNotification.Name("showNote"), object: nil)
-            //performSegue(withIdentifier: "showNote", sender: nil)
         case 1:
             NotificationCenter.default.post(name: NSNotification.Name("showReminder"), object: nil)
         case 2:
+            NotificationCenter.default.post(name: NSNotification.Name("showArchive"), object: nil)
+        case 3:
+            NotificationCenter.default.post(name: NSNotification.Name("showDelete"), object: nil)
+        case 4:
             NotificationCenter.default.post(name: NSNotification.Name("showSignIn"), object: nil)
         default:break
         }
