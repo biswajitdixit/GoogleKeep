@@ -1,10 +1,3 @@
-//
-//  ForgotTableViewController.swift
-//  GoogleKeep
-//
-//  Created by admin on 11/04/21.
-//
-
 import UIKit
 import Firebase
 
@@ -26,11 +19,11 @@ class ForgotTableViewController: UITableViewController {
                 self.present(alert, animated: true, completion: nil)
                 return
             }else{
-            let alert = Alert.createAlertController(title: "Hurray", message: "A password reset email has been sent to your  email id")
-            self.present(alert, animated: true, completion: nil)
             let storyboards = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboards.instantiateViewController(identifier: "LoginTableViewController") as! LoginTableViewController
             self.navigationController?.pushViewController(vc, animated: true)
+                let alert = Alert.createAlertController(title: "Hurray", message: "A password reset email has been sent to your  email id")
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }

@@ -1,9 +1,6 @@
 //
 //  DeleteNoteCollectionViewCell.swift
-//  GoogleKeep
-//
-//  Created by admin on 13/05/21.
-//
+
 
 import UIKit
 

@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  GoogleKeep
-//
-//  Created by admin on 06/04/21.
-//
+
 
 import UIKit
 import FBSDKCoreKit

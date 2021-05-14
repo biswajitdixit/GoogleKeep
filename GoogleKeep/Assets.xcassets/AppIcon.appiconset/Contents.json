@@ -17,6 +17,11 @@
     },
     {
       "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
@@ -31,6 +36,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "20191009115145!Google_Keep_icon_(2015-2020).svg.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -760,6 +761,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IEw-b4-qTy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -781,6 +783,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NeB-Uk-NMP">
+                                <rect key="frame" x="0.0" y="90" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="edL-Ey-rr2">
                                 <rect key="frame" x="0.0" y="148" width="414" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -841,23 +847,39 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NeB-Uk-NMP">
-                                <rect key="frame" x="0.0" y="90" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9I-Lm-LzV" customClass="RoundButton" customModule="GoogleKeep" customModuleProvider="target">
-                                <rect key="frame" x="339" y="709" width="42" height="45"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZg-5R-OGM">
+                                <rect key="frame" x="0.0" y="774" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem title="Item" image="checkmark.rectangle" catalog="system" id="B3M-oS-MMe">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="paintbrush.pointed" catalog="system" id="K7s-0b-0II">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="mic" catalog="system" id="u6k-LC-Rx1">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="photo" catalog="system" id="ipR-e1-m6k">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" tag="-1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc3-jZ-GFO" customClass="RoundButton" customModule="GoogleKeep" customModuleProvider="target">
+                                <rect key="frame" x="279" y="623" width="81" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" red="0.98211747407913208" green="0.98713725805282593" blue="0.97647601366043091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.97456187009811401" green="0.98099535703659058" blue="0.9427485466003418" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4jB-QN-wbn" kind="show" id="ytc-wF-q3U"/>
+                                    <segue destination="4jB-QN-wbn" kind="show" id="S1f-Ny-m7y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -875,6 +897,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Notes" id="Rdn-eh-5IX">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="line.horizontal.3" catalog="system" id="vrm-br-Vg8">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onMoreTapped" destination="EGs-o3-80v" id="Px0-4E-1L1"/>
                             </connections>
@@ -900,8 +923,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6j3-tT-bGs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" systemColor="systemBlueColor"/>
+                            <color key="textColor" name="AccentColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -982,11 +1009,13 @@
                     <navigationItem key="navigationItem" id="ncB-Rv-TTG">
                         <rightBarButtonItems>
                             <barButtonItem title="delete" image="delete-forever-5" id="vyC-V6-D9V">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="deleteBtn:" destination="4jB-QN-wbn" id="7NY-TW-UwU"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="square.and.arrow.down.fill" catalog="system" id="dcu-6v-FtY">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="archiveBtn:" destination="4jB-QN-wbn" id="YVC-XR-GWH"/>
                                 </connections>
@@ -1179,6 +1208,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Deleted" id="kF0-D0-5aU">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="back" id="GqE-OP-lEG">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="backToNote:" destination="ufR-le-pbR" id="tGN-mc-uvQ"/>
                             </connections>
@@ -1202,6 +1232,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kmV-ob-E3x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1280,6 +1311,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cG8-fw-8qk">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up.fill" catalog="system" id="4Te-SL-ILo">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="unArchive:" destination="QfS-Ry-gy2" id="SUP-u7-kDa"/>
                             </connections>
@@ -1382,6 +1414,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Archive" id="KOU-eP-FFY">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="back" id="k8E-9g-3dg">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="backToNote:" destination="dNW-Lm-6fn" id="349-Uj-2jV"/>
                             </connections>
@@ -1405,6 +1438,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wCg-ms-2UD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1417,24 +1451,31 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="F9I-Lm-LzV">
-            <size key="intrinsicContentSize" width="30" height="49"/>
+        <designable name="Cc3-jZ-GFO">
+            <size key="intrinsicContentSize" width="30" height="47"/>
         </designable>
     </designables>
     <resources>
         <image name="add-reminder" width="100" height="100"/>
         <image name="archive" width="75" height="75"/>
         <image name="back" width="50" height="50"/>
+        <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
         <image name="delete-forever-3" width="48" height="48"/>
         <image name="delete-forever-5" width="32" height="32"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="mic" catalog="system" width="108" height="128"/>
+        <image name="paintbrush.pointed" catalog="system" width="128" height="116"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="power-off-button--v2" width="100" height="100"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="task" width="100" height="100"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
