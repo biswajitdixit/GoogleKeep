@@ -22,9 +22,14 @@ class EditAndAddNote: UIViewController {
     }
 
     @IBAction func deleteBtn(_ sender: UIBarButtonItem) {
-        NoteRealtimeDatabase.getInstance().saveDeletedNote(title: titleTxt.text!, description: descriptionTxt.text!)
-        noteToEdit?.ref?.removeValue()
-        self.navigationController?.popViewController(animated: true)
+        if  !(titleTxt.text!.isEmpty) && !(descriptionTxt.text!.isEmpty) {
+            NoteRealtimeDatabase.getInstance().saveDeletedNote(title: titleTxt.text!, description: descriptionTxt.text!)
+                noteToEdit?.ref?.removeValue()
+            self.navigationController?.popViewController(animated: true)
+        }else{
+           self.navigationController?.popViewController(animated: true)
+        }
+       
     }
     
     @IBAction func archiveBtn(_ sender: UIBarButtonItem) {
@@ -43,12 +48,5 @@ class EditAndAddNote: UIViewController {
             print("Added")
         }
     }
-    
- 
-  
-       
-        
-    
-    
     
 }

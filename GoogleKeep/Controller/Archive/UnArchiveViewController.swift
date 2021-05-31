@@ -1,11 +1,13 @@
 import UIKit
 
 class UnArchiveViewController: UIViewController {
+   
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var descriptionTxt: UITextView!
     var noteToUnArchive : NoteItem?
     var isUnArchive = false
     var key: String?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         if isUnArchive == true{

@@ -1,30 +1,33 @@
+
+
+import Foundation
 import UIKit
 
-extension ArchiveViewController: UICollectionViewDataSource,UICollectionViewDelegate {
-    
+private let reuseIdentifier = "noteCell"
+extension NotesViewController: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isSearching {
             return filiteredNotes.count
         }else{
-            return archiveNote.count
+            return notes.count
         }
         
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ArchiveCollectionViewCell", for: indexPath) as! ArchiveCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:reuseIdentifier, for: indexPath) as! NoteCell
         if isSearching{
             let note = filiteredNotes[indexPath.row]
-            cell.titlLbl.text = note.title
+            cell.titleLbl.text = note.title
             cell.descriptionLbl.text = note.description
-            cell.cardView.setCardView(View: cell.cardView)
+            //cell.cardView.setCardView(View: cell.cardView)
             
         }else{
-            let note = archiveNote[indexPath.row]
-            cell.titlLbl.text = note.title
+            let note = notes[indexPath.row]
+            cell.titleLbl.text = note.title
             cell.descriptionLbl.text = note.description
-            cell.cardView.setCardView(View: cell.cardView)
+           // cell.cardView.setCardView(View: cell.cardView)
         }
         
         return cell
@@ -32,34 +35,51 @@ extension ArchiveViewController: UICollectionViewDataSource,UICollectionViewDele
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let unArchiveVC = self.storyboard?.instantiateViewController(withIdentifier: "UnArchiveViewController") as? UnArchiveViewController else {
+        guard let noteVC = self.storyboard?.instantiateViewController(withIdentifier: "noteVC") as? EditAndAddNote else {
             print("failed to navigate")
             return  }
         if isSearching {
             let note = filiteredNotes[indexPath.row]
-          unArchiveVC.noteToUnArchive = note
-          unArchiveVC.isUnArchive = true
-          unArchiveVC.key = note.ref?.key
+            noteVC.noteToEdit = note
+            noteVC.isEdit = true
+            noteVC.key = note.ref?.key
+           
             print(indexPath.row)
         }else{
-            let note = archiveNote[indexPath.row]
-          unArchiveVC.noteToUnArchive = note
-          unArchiveVC.isUnArchive = true
-          unArchiveVC.key = note.ref?.key
+            let note = notes[indexPath.row]
+            noteVC.noteToEdit = note
+            noteVC.isEdit = true
+            noteVC.key = note.ref?.key
            
             print(indexPath.row)
         }
             
-        navigationController?.pushViewController(unArchiveVC, animated: true )
+        navigationController?.pushViewController(noteVC, animated: true )
        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: searchBar.bounds.height)
     }
-    
+   
 }
 
-extension ArchiveViewController: UISearchBarDelegate {
+
+extension UIView{
+    func setCardView(View : UIView){
+        
+        View.layer.cornerRadius = 10.0
+        View.layer.borderColor  =  UIColor.lightGray.cgColor
+        View.layer.borderWidth = 2.0
+        View.layer.shadowOpacity = 1.0
+        View.layer.shadowColor =  UIColor.clear.cgColor
+        View.layer.shadowRadius = 2.0
+        View.layer.shadowOffset = CGSize(width:3, height: 3)
+        View.layer.masksToBounds = true
+        
+    }
+}
+
+extension NotesViewController: UISearchBarDelegate {
     
     func searchBarIsEmpty() -> Bool {
         return searchBar.text?.isEmpty ?? true
@@ -91,11 +111,12 @@ extension ArchiveViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filiteredNotes.removeAll()
         let searchPredicate = searchBar.text!
-        filiteredNotes = archiveNote.filter( {$0.title!.lowercased().range(of: searchPredicate.lowercased()) != nil})
+        filiteredNotes = notes.filter( {$0.title!.lowercased().range(of: searchPredicate.lowercased()) != nil})
         isSearching = (filiteredNotes.count == 0) ? false: true
         collectionView?.reloadData()
     }
     
 
 }
+
 

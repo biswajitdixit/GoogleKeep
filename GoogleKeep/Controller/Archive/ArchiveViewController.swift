@@ -2,7 +2,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-
+private let reuseIdentifier = "noteCell"
 class ArchiveViewController: UIViewController {
     var isGridFlowLayoutUsed: Bool = false{
         didSet{
@@ -22,6 +22,7 @@ class ArchiveViewController: UIViewController {
     var listFlowLayout = ListFlowLayout()
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCell()
         collectionView.collectionViewLayout = gridFlowLayout
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -44,6 +45,10 @@ class ArchiveViewController: UIViewController {
    @IBAction func backToNote(_ sender: Any) {
        dismiss(animated: true, completion: nil)
    }
+    private func registerCell()
+    {
+        collectionView.register(UINib.init(nibName: "NoteCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+    }
    fileprivate func updateButtonApperance(){
        let layout = isGridFlowLayoutUsed ? gridFlowLayout : listFlowLayout
        UIView.animate(withDuration: 0.2){ () -> Void in
@@ -66,30 +71,15 @@ class ArchiveViewController: UIViewController {
        self.collectionView?.reloadData()
    }
    
-   
-  
+    
    
    func getAllArchiveNote () {
-       databasehandle = ref.child("users/\(self.user.uid)/archiveNote").observe(.value, with: { (snapshot) in
-           var newNote = [NoteItem]()
-
-           for itemSnapShot in snapshot.children {
-               let note = NoteItem(snapshot: itemSnapShot as! DataSnapshot)
-               newNote.append(note)
-               print("")
-           }
-           self.archiveNote = newNote
-           self.collectionView.reloadData()
-       })
-      
-   }
-   
-   
-   deinit {
-       ref?.child("users/\(self.user.uid)/archiveNote").removeObserver(withHandle: databasehandle)
-   }
-
-
+    NoteRealtimeDatabase.getInstance().getAllArchiveNote { archiveNote in
+        self.archiveNote = archiveNote
+        self.collectionView.reloadData()
+        }
+           
+    }
    
 
 }

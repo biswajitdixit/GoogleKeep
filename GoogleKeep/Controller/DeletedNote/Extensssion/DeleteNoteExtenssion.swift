@@ -1,4 +1,6 @@
 import UIKit
+private let reuseIdentifier = "noteCell"
+
 extension DeleteNoteViewController: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if isSearching {
@@ -11,16 +13,16 @@ extension DeleteNoteViewController: UICollectionViewDataSource,UICollectionViewD
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"DeleteNoteCollectionViewCell", for: indexPath) as! DeleteNoteCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:reuseIdentifier, for: indexPath) as! NoteCell
         if isSearching{
             let note = filiteredNotes[indexPath.row]
-            cell.titlLbl.text = note.title
+            cell.titleLbl.text = note.title
             cell.descriptionLbl.text = note.description
             cell.cardView.setCardView(View: cell.cardView)
             
         }else{
             let note = deleteNote[indexPath.row]
-            cell.titlLbl.text = note.title
+            cell.titleLbl.text = note.title
             cell.descriptionLbl.text = note.description
             cell.cardView.setCardView(View: cell.cardView)
         }
