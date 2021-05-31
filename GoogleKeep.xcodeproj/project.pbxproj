@@ -276,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				84FC7FBF263E743100199489 /* NoteItems.swift */,
-				84FC7FC9263EE3BF00199489 /* NoteRealtimeDatabase.swift */,
+				84FC7FC4263EE18800199489 /* NoteDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 		84FC7FC3263EE07100199489 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				84FC7FC4263EE18800199489 /* NoteDataModel.swift */,
+				84FC7FC9263EE3BF00199489 /* NoteRealtimeDatabase.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
